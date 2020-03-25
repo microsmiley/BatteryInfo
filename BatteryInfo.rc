@@ -1,0 +1,310 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 日语(日本) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+#pragma code_page(932)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 17, 1\r\n"
+    "#pragma code_page(932)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\BatteryInfo.rc2""  // Microsoft Visual C++ ????????????????\r\n"
+    "#include ""l.jpn\\afxres.rc""          // ??????????\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // 日语(日本) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(简体) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE LANG_CHINESE, SUBLANG_NEUTRAL
+#pragma code_page(936)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 Battery Information"
+FONT 10, "Microsoft YaHei UI", 0, 0, 0x0
+BEGIN
+    LTEXT           "Battery Information Version 1.0",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2019",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,14,WS_GROUP
+    LTEXT           "This program is licsensed under GPL v3.",IDC_STATIC,40,40,119,8
+    ICON            IDI_MAINFRAME,IDC_STATIC,15,15,16,13
+END
+
+IDD_BATTERYINFO_DIALOG DIALOGEX 0, 0, 340, 189
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "BatteryInfo"
+FONT 10, "Microsoft YaHei UI", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "选择电池(&B)",IDC_STATIC,7,7,133,26
+    COMBOBOX        IDC_CB_BATTERYLIST,11,16,125,68,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "更新(&U)",IDC_B_UPDATE,211,15,43,15
+    GROUPBOX        "自动刷新",IDC_STATIC,145,7,49,26
+    CONTROL         "",IDC_SPIN_AUTOUPDATE,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_ARROWKEYS,177,15,10,14
+    EDITTEXT        IDC_E_AUTOUPDATE,152,16,24,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "秒",IDC_STATIC,180,18,8,8
+    PUSHBUTTON      "关闭(&X)",IDOK,271,15,45,15
+    GROUPBOX        "基本信息",IDC_STATIC,7,34,187,81
+    LTEXT           "制造商",IDC_STATIC,14,44,22,8
+    EDITTEXT        IDC_E_MANUFACTURENAME,53,43,133,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "生产日期",IDC_STATIC,14,58,28,8
+    EDITTEXT        IDC_E_MANUFACTUREDATE,53,57,133,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "设备名称",IDC_STATIC,14,73,28,8
+    EDITTEXT        IDC_E_DEVICENAME,53,71,133,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "序列号",IDC_STATIC,14,87,22,8
+    EDITTEXT        IDC_E_SERIALNUMBER,53,85,133,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "唯一标识符",IDC_STATIC,14,100,35,8
+    EDITTEXT        IDC_E_UNIQUEID,53,99,133,12,ES_AUTOHSCROLL | ES_READONLY
+    GROUPBOX        "容量",IDC_STATIC,7,113,125,69
+    LTEXT           "当前电压",IDC_STATIC,16,125,28,8
+    EDITTEXT        IDC_E_VOLTAGE,53,123,66,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "设计容量",IDC_STATIC,16,139,28,8
+    EDITTEXT        IDC_E_DESIGNEDCAPACITY,53,137,66,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "最大容量",IDC_STATIC,16,153,28,8
+    EDITTEXT        IDC_E_CURRENTFULLCAPACITY,53,151,66,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "当前容量",IDC_STATIC,16,167,28,8
+    EDITTEXT        IDC_E_CURRENTCAPACITY,53,165,66,12,ES_AUTOHSCROLL | ES_READONLY
+    CONTROL         "Progress1",IDC_P_CAPACITY,"msctls_progress32",PBS_SMOOTH | WS_BORDER,143,168,178,6
+    GROUPBOX        "状态",IDC_STATIC,136,113,192,69
+    EDITTEXT        IDC_E_STATUS,141,123,182,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "充放电速度",IDC_STATIC,142,139,35,8
+    EDITTEXT        IDC_E_RATE,178,137,52,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "剩余时间",IDC_STATIC,241,139,28,8
+    EDITTEXT        IDC_E_ESTIMATEDTIME,270,137,53,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "电池温度",IDC_STATIC,241,153,28,8
+    EDITTEXT        IDC_E_TEMPERATURE,270,151,53,12,ES_AUTOHSCROLL | ES_READONLY
+    GROUPBOX        "能力",IDC_STATIC,198,34,50,81
+    CHECKBOX        "相对容量",IDC_C_RELATIVE,202,45,43,8
+    CHECKBOX        "标准电源",IDC_C_SYSTEMBATTERY,202,60,43,8
+    CHECKBOX        "短时间内",IDC_C_SHORTTERM,202,74,43,8
+    CHECKBOX        "充电可能",IDC_C_CHARGEABLE,202,87,43,8
+    GROUPBOX        "其他",IDC_STATIC,253,34,75,81
+    LTEXT           "化学成分",IDC_STATIC,257,45,28,8
+    EDITTEXT        IDC_E_CHEMCODE,288,43,36,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "低容量",IDC_STATIC,257,59,22,8
+    EDITTEXT        IDC_E_LOWCAPACITY,288,57,36,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "警告容量",IDC_STATIC,257,73,28,8
+    EDITTEXT        IDC_E_WARNCAPACITY,288,71,36,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "周期数",IDC_STATIC,257,87,22,8
+    EDITTEXT        IDC_E_CYCLECOUNT,288,85,36,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_E_PERCENT,178,151,52,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "电池电量",IDC_STATIC,142,153,27,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,0
+ PRODUCTVERSION 1,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "000404b0"
+        BEGIN
+            VALUE "FileDescription", "Battery Information Program"
+            VALUE "FileVersion", "1.0.0.0"
+            VALUE "InternalName", "BatteryInfo"
+            VALUE "LegalCopyright", "Copyright (C) 2019"
+            VALUE "OriginalFilename", "BatteryInfo.EXE"
+            VALUE "ProductName", "Battery Information"
+            VALUE "ProductVersion", "1.0.0.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x4, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_BATTERYINFO_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 333
+        VERTGUIDE, 2
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 182
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_BATTERYINFO_DIALOG AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_ABOUTBOX AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_ABOUTBOX            "版本信息(&A)..."
+    IDS_UNKNOWN             "未知"
+    IDS_DATEFORMAT          "%d年%d月%d日"
+    IDS_CAPACITYFORMAT      "%d mWh"
+    IDS_RELCAPACITYFORMAT   "%d"
+    IDS_VOLTAGEFORMAT       "%d mv"
+    IDS_STATCHARGE          "充电中"
+    IDS_STATDISCHARGE       "放电中"
+    IDS_STATPOWERONLINE     "外部电源使用中"
+    IDS_STATCRITICAL        "消耗"
+    IDS_CYCLECOUNTFORMAT    "%d 次"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_ERR_NOBATTERIES     "找不到电池。"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_RATEFORMAT          "%d mw"
+    IDS_TIMEFORMAT          "%d时%d分%d秒"
+    IDS_TEMPFORMAT          "%d.%d K"
+    IDS_CAPPERFORMAT        "%d ％"
+END
+
+#endif    // 中文(简体) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(简体，中国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_MAINFRAME           ICON                    "res\\BatInfo.ico"
+
+#endif    // 中文(简体，中国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+#ifdef _WIN32
+LANGUAGE 17, 1
+#pragma code_page(932)
+#endif //_WIN32
+#include "res\BatteryInfo.rc2"  // Microsoft Visual C++ ????????????????
+#include "l.jpn\afxres.rc"          // ??????????
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
